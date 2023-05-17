@@ -22,3 +22,5 @@ class DataLoader(private val productRepository: ProductRepository) : CommandLine
         productRepository.saveAll(products)
     }
 }
+
+//implementando la interfaz CommandLineRunner, lo que significa que el método run() se ejecutará cuando la aplicación se inicie

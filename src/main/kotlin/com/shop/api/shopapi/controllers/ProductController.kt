@@ -25,6 +25,12 @@ class ProductController(private val productRepository: ProductRepository) {
                 productRepository.deleteById(id.toInt())
                 return product
         }
+        @GetMapping("/products/discounted")
+        fun getDiscountedProducts(@RequestParam("discount") hasDiscount: Boolean): List<Product> {
+                return productRepository.findByDiscountTrue()
+        }
+
+
 }
 @ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "product not found")
 class ProductNotFoundException : RuntimeException()

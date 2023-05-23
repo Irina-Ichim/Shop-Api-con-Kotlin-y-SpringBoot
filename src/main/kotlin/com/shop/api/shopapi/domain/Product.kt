@@ -5,7 +5,7 @@ import jakarta.persistence.*
 data class Product(
    var name: String,
    var brand: String,
-   val has_discount: Boolean,
+   val discount: Boolean,
    val price: Double,
 
    @Id

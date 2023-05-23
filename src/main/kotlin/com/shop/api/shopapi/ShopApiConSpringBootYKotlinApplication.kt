@@ -9,3 +9,4 @@ class ShopApiConSpringBootYKotlinApplication
 fun main(args: Array<String>) {
     runApplication<ShopApiConSpringBootYKotlinApplication>(*args)
 }
+

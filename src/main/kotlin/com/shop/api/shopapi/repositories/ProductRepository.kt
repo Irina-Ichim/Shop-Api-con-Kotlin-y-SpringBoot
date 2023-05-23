@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository
 
 
 @Repository
-interface ProductRepository : JpaRepository<Product, Int> {
-    fun findByHasDiscountTrue(): List<Product>}
+interface ProductRepository : JpaRepository<Product, Int> /*{
+    fun findByHasDiscountTrue(): List<Product>}*/

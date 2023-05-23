@@ -15,7 +15,7 @@ class DataLoader(private val productRepository: ProductRepository) : CommandLine
             Product("Perfume Mademoiselle", "Chanel",false, 115.99,2),
             Product("Perfume Guilty Mujer", "Gucci", true, 89.99,3),
             Product("Perfume Vip", "Carolina Herrera", false, 78.00,4),
-            Product("Perfume La Nuit Tresor", "Lancóme",false, 150.20,6),
+            Product("Perfume La Nuit Tresor", "Lancóme",false, 150.20,5),
             Product("Perfume Black Orchid", "Tom Ford", false, 119.99,6)
         )
 

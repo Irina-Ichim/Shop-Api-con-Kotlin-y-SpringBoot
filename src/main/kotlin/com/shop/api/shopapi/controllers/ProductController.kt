@@ -19,9 +19,16 @@ class ProductController(private val productRepository: ProductRepository) {
         fun addProduct(@RequestBody products: Product): Product? {
                 return productRepository.save(products)
         }
+        @DeleteMapping("/products/{id}")
+        fun deleteProductById(@PathVariable id: Long): Product? {
+                val product: Product = productRepository.findById(id.toInt()).orElseThrow { ProductNotFoundException() }
+                productRepository.deleteById(id.toInt())
+                return product
+        }
 }
 @ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "product not found")
 class ProductNotFoundException : RuntimeException()
+
 
 
 

@@ -29,6 +29,7 @@ class ProductController(private val productRepository: ProductRepository) {
         fun getDiscountedProducts(@RequestParam("discount") hasDiscount: Boolean): List<Product> {
                 return productRepository.findByDiscountTrue()
         }
+        //recuerda http://localhost:8080/products/discounted?discount=true para postman
 
 
 }
@@ -40,16 +41,3 @@ class ProductNotFoundException : RuntimeException()
 
 
 
-//Para probar el endpoint GET /products?discount=true, puedes enviar una solicitud GET a http://localhost:8080/products?discount=true y recibirás solo los productos que tienen descuento como respuesta.
- /*   @PostMapping("/products")
-    fun createProduct(@RequestBody product: Product): Product {
-        products.add(product)
-        return product
-    }*/
-
-   /* @DeleteMapping("/products/{id}")
-    fun deleteProduct(@PathVariable id: String) {
-        val product = products.find { it.id == id }
-        products.remove(product)
-    }
-}*/
